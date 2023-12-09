@@ -14,10 +14,11 @@ body,.snake{
 
 #game-board{
   border-radius: 100px;
-  display: grid;
+
   grid-template-columns: repeat(20,11px);
   grid-template-rows: repeat(20,11px);
   margin: 5px;
+  display: none;
 }
 
 .game-border-1{
@@ -37,14 +38,12 @@ body,.snake{
   box-shadow: inset 0 0 0 3px #8b966c;
 }
 #instruction-text{
-  position: absolute;
   font-size: 20px;
-  top:46%;
   color: #333;
   width: 200px;
   text-transform: capitalize;
   margin: 0;
-  padding: 10px;
+  padding: 0;
 }
 
 .scores{
@@ -81,9 +80,10 @@ body,.snake{
 }
 
 #logo{
-  position: absolute;
-  top: 25%;
-  width: 150px;
+
+  max-width: 120px; /* Garante que a imagem não ultrapasse a largura da div */
+  height: auto; /* Mantém a proporção da imagem */
+  display: block; /* Remove espaço extra abaixo da imagem */
 
 }
 
@@ -124,6 +124,17 @@ body,.snake{
   grid-row: 3;
 }
 
+.instructions{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 100%;
+  align-content: space-between;
+  flex-direction: column;
+  overflow: hidden; /* Impede que a imagem ultrapasse os limites da div */
+}
+
 footer {
   color: #fff;
   text-align: center;
@@ -138,54 +149,9 @@ footer {
   background-color: #abb78a;
 }
 
-@media only screen and (min-width: 415px) {
+@media only screen and (min-width: 900px) {
   .game-pad{
     display: none;
   } 
   
-}
-
-@media screen and (min-width:415px) {
-  #logo{
-    position: absolute;
-    top: 33%;
-
-  }
-  #instruction-text{
-    position: absolute;
-    top:53%;
-  }
-}
-
-@media screen and (min-height:800px) {
-  #logo{
-    position: absolute;
-    top: 30%;
-  }
-  #instruction-text{
-    position: absolute;
-    top:46%;
-  }
-}
-
-@media screen and (min-height:930px) {
-  #logo{
-    position: absolute;
-    top: 40%;
-  }
-  #instruction-text{
-    position: absolute;
-    top:57%;
-  }
-}
-@media screen and (min-width:600px) {
-  #logo{
-    position: absolute;
-    top: 40%;
-
-  }
-  #instruction-text{
-    position: absolute;
-    top:58%;
-  }
 }
