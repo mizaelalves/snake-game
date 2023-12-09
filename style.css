@@ -124,20 +124,28 @@ body,.snake{
   grid-row: 3;
 }
 
+footer {
+  color: #fff;
+  text-align: center;
+  font-size: 10px;
+  position: relative; /* Importante para garantir que o posicionamento absoluto seja em relação ao body */
+  bottom: 0;
+  width: 100%;
+}
 
 
 .button:active {
   background-color: #abb78a;
 }
 
-@media only screen and (min-width: 400px) {
+@media only screen and (min-width: 415px) {
   .game-pad{
     display: none;
   } 
   
 }
 
-@media screen and (min-width:390px) {
+@media screen and (min-width:415px) {
   #logo{
     position: absolute;
     top: 33%;
@@ -149,7 +157,28 @@ body,.snake{
   }
 }
 
-@media screen and (min-width:500px) {
+@media screen and (min-height:800px) {
+  #logo{
+    position: absolute;
+    top: 30%;
+  }
+  #instruction-text{
+    position: absolute;
+    top:46%;
+  }
+}
+
+@media screen and (min-height:930px) {
+  #logo{
+    position: absolute;
+    top: 40%;
+  }
+  #instruction-text{
+    position: absolute;
+    top:57%;
+  }
+}
+@media screen and (min-width:600px) {
   #logo{
     position: absolute;
     top: 40%;
