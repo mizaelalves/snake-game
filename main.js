@@ -5,6 +5,7 @@ $(function () {
   const logo = $('#logo')
   const score = $('#score')
   const highScoreText = $('#highScore')
+  const instruction = $('.instructions')
   // Define game Variables
   const gridSize = 20
   let snake = [{ x: 10, y: 10 }]
@@ -116,8 +117,9 @@ $(function () {
   // Start game function
   function startGame() {
     gameStarted = true // Keedp track of a running game
-    instructionText.css('display', 'none')
-    logo.css('display', 'none')
+
+    instruction.css('display', 'none')
+    board.css('display', 'grid')
     gameInterval = setInterval(() => {
       move()
       checkCollision()
@@ -211,8 +213,8 @@ $(function () {
   function stopGame() {
     clearInterval(gameInterval) // Clear past interval
     gameStarted = false
-    instructionText.css('display', 'block')
-    logo.css('display', 'block')
+    instruction.css('display', 'flex')
+    board.css('display', 'none')
   }
 
   function updateHighScore() {

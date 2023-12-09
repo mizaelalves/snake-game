@@ -128,7 +128,7 @@ body,.snake{
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 200px;
+  height: 230px;
   width: 100%;
   align-content: space-between;
   flex-direction: column;
